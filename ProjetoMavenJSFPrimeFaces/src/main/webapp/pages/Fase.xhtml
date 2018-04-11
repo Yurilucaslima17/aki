@@ -24,8 +24,10 @@
        <p:inputText value="#{Champs.dataIni}"/>
        <p:outputLabel value="#{msg['pages.fase.cat']}" />
        <p:inputText value="#{Champs.dataFim}"/>
-       <p:outputLabel value="#{msg['pages.fase.grupo']}" />
-       <p:inputText value="#{Champs.iniInscr}"/>
+       <p:button outcome="Grupo.xhtml" value="#{msg['pages.fase.grupo']}">
+  
+</p:button> 
+<br/>
        <p:outputLabel value="#{msg['pages.fase.num']}" />
        <p:inputText value="#{Champs.fimInscr}"/>
 
@@ -33,6 +35,10 @@
                      action="#{alunoManagedBean.salvar}"
                      update=":formFase"
                      />
+        <p:button outcome="Categoria.xhtml" value="#{msg['pages.voltar']}">
+  
+</p:button>
+              
        </p:panelGrid>
        </h:form>
 	   

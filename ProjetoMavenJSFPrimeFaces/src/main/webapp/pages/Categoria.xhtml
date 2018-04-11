@@ -8,35 +8,31 @@
 	xmlns:tm="http://java.sun.com/jsf/composite/terminal/1_0/components">
 	
 	<ui:define name="title">
-		<h:outputText value="#{msg['pages.Campeonato.title']}" />
+		<h:outputText value="#{msg['pages.categoria.title']}" />
 	</ui:define>
 	
 
 	<ui:define name="principal">
 	 	 
-	   	<p:outputLabel value="#{msg['pages.Campeonato.hello']}"/>
+	   	<p:outputLabel value="#{msg['pages.categoria.hello']}"/>
 	   	
 	   	<h:form id="formEquip">
       <p:panelGrid columns="2">
-      <p:outputLabel value="#{msg['pages.Campeonato.Nome']}" />
+      <p:outputLabel value="#{msg['pages.categoria.nome']}" />
        <p:inputText value="#{Champs.nome}"/>
-       <p:outputLabel value="#{msg['pages.Campeonato.dataINI']}" />
+       <p:outputLabel value="#{msg['pages.categoria.fase']}" />
        <p:inputText value="#{Champs.dataIni}"/>
-       <p:outputLabel value="#{msg['pages.Campeonato.dataFIM']}" />
+       <p:outputLabel value="#{msg['pages.categoria.minjog']}" />
        <p:inputText value="#{Champs.dataFim}"/>
-       <p:outputLabel value="#{msg['pages.Campeonato.iniInscr']}" />
+       <p:outputLabel value="#{msg['pages.categoria.maxjog']}" />
        <p:inputText value="#{Champs.iniInscr}"/>
-       <p:outputLabel value="#{msg['pages.Campeonato.fimInscr']}" />
+       <p:outputLabel value="#{msg['pages.categoria.sexo']}" />
        <p:inputText value="#{Champs.fimInscr}"/>
-       <p:outputLabel value="#{msg['pages.Campeonato.taxa']}" />
-       <p:inputText value="#{Champs.tax}"/>
-       <p:outputLabel value="#{msg['pages.Campeonato.locais']}" />
-       <p:inputText value="#{Champs.locais}"/>
-       <p:outputLabel value="#{msg['pages.Campeonato.Juiz']}" />
-       <p:inputText value="#{Champs.juiz}"/>
-       <p:outputLabel value="#{msg['pages.Campeonato.Categorias']}" />
-       <p:inputText value="#{Champs.categ}"/>
-       <p:button outcome="Categoria.xhtml" value="#{msg['pages.categoria.cat']}"></p:button>
+
+		<p:button outcome="Fase.xhtml" value="#{msg['pages.fase.menu']}"></p:button>
+       <p:button outcome="Campeonato.xhtml" value="#{msg['pages.voltar']}"></p:button>
+  
+
 
         <p:commandButton value="#{msg['pages.Usuario.salvar']}" 
                      action="#{alunoManagedBean.salvar}"

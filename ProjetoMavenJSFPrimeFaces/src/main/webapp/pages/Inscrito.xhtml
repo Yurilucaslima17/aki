@@ -15,7 +15,13 @@
 	<ui:define name="principal">
 	 	 
 	   	<p:outputLabel value="#{msg['pages.inscrito.hello']}"/>
-	   	
+	   	<br/>
+	   	<p:inputText value="#{Inscrito.Nome}"/>
+	   	<p:commandButton value="#{msg['pages.busca']}" 
+                     action="#{alunoManagedBean.salvar}"
+                     update=":formIns"
+                     />
+       
 	   	<h:form id="formIns">
       <p:panelGrid columns="1">
       <p:outputLabel value="#{msg['pages.inscrito.tipo']}" />
