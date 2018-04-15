@@ -1,0 +1,76 @@
+<ui:composition template="templateMenu.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui2="http://java.sun.com/jsf/facelets"
+	xmlns:tm="http://java.sun.com/jsf/composite/terminal/1_0/components">
+	
+	<ui:define name="title">
+		<h:outputText value="#{msg['pages.Resultado.title']}" />
+	</ui:define>
+	
+
+	<ui:define name="principal">
+	 	 
+	   	<p:outputLabel value="#{msg['pages.Resultado.hello']}"/>
+	   	
+	   	<h:form id="formResultado">
+	   		<p:panelGrid columns="2">
+      			<p:outputLabel value="#{msg['pages.Resultado.golsMandantes']}" />
+       			<p:inputText value="#{Resultado.golsMandantes}"/>
+       			<p:outputLabel value="#{msg['pages.Resultado.golsVisitantes']}" />
+       			<p:inputText value="#{Resultado.golsVisitantes}"/>
+       			<p:outputLabel value="#{msg['pages.Resultado.golsPenaltiMandantes']}" />
+       			<p:inputText value="#{Resultado.golsPenaltiMandante}"/>
+       			<p:outputLabel value="#{msg['pages.Resultado.golsPenaltiVisitantes']}" />
+	       		<p:inputText value="#{Resultado.golsPenaltiVisitantes}"/>
+	       		<p:outputLabel value="#{msg['pages.Resultado.cartoesMandantes']}" />
+       			<p:inputText value="#{Resultado.cartoesMandantes}"/>
+       			<p:outputLabel value="#{msg['pages.Resultado.cartoesVisitantes']}" />
+       			<p:inputText value="#{Resultado.cartoesVisitantes}"/>
+       
+	   			<p:button outcome="Partida.xhtml" value="#{msg['pages.Resultado.partida']}"></p:button>
+	   
+       		    <p:commandButton value="#{msg['pages.Usuario.salvar']}" 
+                     action="#{alunoManagedBean.salvar}"
+                     update=":formResultado"
+                />
+                     
+       			<p:outputLabel for="jogador" value="Jogador: " />
+        		<p:selectOneMenu id="jogador" value="#{selectOneMenuView.jogador}">
+            		<f:selectItem itemLabel="Selecione um" itemValue="" />
+            		<f:selectItems value="#{selectOneMenuView.jogador}" />
+        		</p:selectOneMenu>
+        		<p:outputLabel value="#{msg['pages.Resultado.golsJogador']}" />
+       			<p:inputText value="#{Resultado.golsJogador}"/>
+       			<p:outputLabel value="#{msg['pages.Resultado.cartaoJogador']}" />
+       			<p:inputText value="#{Resultado.cartaoJogador}"/>
+       			<p:commandButton value="#{msg['pages.Usuario.salvar']}" 
+                     action="#{alunoManagedBean.salvar}"
+                     update=":formResultado"
+                />
+        		
+       </p:panelGrid>
+       <br/>
+       <p:dataTable id="Jogador" value="#{dtEditView.Jogador}">
+    	<p:column headerText="Jogador">
+        	<h:outputText value="#{Jogador.nome}" />
+    	</p:column>
+    	
+    	<p:column headerText="Gols">
+        	<h:outputText value="#{Gol.Inscrito.Usuario.Nome}" />
+    	</p:column>
+    	
+    	<p:column headerText="Cartões">
+        	<h:outputText value="#{Cartao.Inscrito.Usuario.Nome}" />
+    	</p:column>
+    	
+	  </p:dataTable>
+     </h:form>
+	   
+	</ui:define>
+</ui:composition>
+
+

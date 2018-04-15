@@ -6,7 +6,7 @@ import javax.persistence.Id;
 @Entity
 public class Inscrito {
 	
-	private enum Tipo {ADM, Juiz, Organizador, Jogador, Técnico, Torcedor, Diretor;};;
+	private enum Tipo {ADM, Juiz, Organizador, Jogador, TÃ©cnico, Torcedor, Diretor;};;
 	private Tipo tipo;
 	private Usuario usuario;
 	@Id

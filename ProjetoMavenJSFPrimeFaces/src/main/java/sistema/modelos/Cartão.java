@@ -4,10 +4,10 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Cart„o {
+public class Cart√£o {
 	@Id
 	private Inscrito inscrito;
-	private enum Tipo {Jogador, TÈcnico;};
+	private enum Tipo {Jogador, T√©cnico;};
 	private Tipo tipo;
 	private int tempo;
 	public Inscrito getInscrito() {
@@ -30,7 +30,7 @@ public class Cart„o {
 	}
 	@Override
 	public String toString() {
-		return "Cart„o [inscrito=" + inscrito + ", tipo=" + tipo + ", tempo=" + tempo + "]";
+		return "Cart√£o [inscrito=" + inscrito + ", tipo=" + tipo + ", tempo=" + tempo + "]";
 	}
 	
 }

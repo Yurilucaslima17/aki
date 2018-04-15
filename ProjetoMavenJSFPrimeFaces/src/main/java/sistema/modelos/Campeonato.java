@@ -13,8 +13,8 @@ public class Campeonato {
 	private List<Local> Locais;
 	private List<Juiz> Juizes;
 	private List<Categoria> Categorias;
-	private Date DataInicioInscrição;
-	private Date DataFimInscrição;
+	private Date DataInicioInscricao;
+	private Date DataFimInscricao;
 	private Date InicioCampeonato;
 	private Date FimCampeonato;
 	private double valorTaxa;
@@ -42,17 +42,17 @@ public class Campeonato {
 	public void setCategorias(List<Categoria> categorias) {
 		Categorias = categorias;
 	}
-	public Date getDataInicioInscrição() {
-		return DataInicioInscrição;
+	public Date getDataInicioInscricao() {
+		return DataInicioInscricao;
 	}
-	public void setDataInicioInscrição(Date dataInicioInscrição) {
-		DataInicioInscrição = dataInicioInscrição;
+	public void setDataInicioInscricao(Date dataInicioInscricao) {
+		DataInicioInscricao = dataInicioInscricao;
 	}
-	public Date getDataFimInscrição() {
-		return DataFimInscrição;
+	public Date getDataFimInscricao() {
+		return DataFimInscricao;
 	}
-	public void setDataFimInscrição(Date dataFimInscrição) {
-		DataFimInscrição = dataFimInscrição;
+	public void setDataFimInscricao(Date dataFimInscricao) {
+		DataFimInscricao = dataFimInscricao;
 	}
 	public Date getInicioCampeonato() {
 		return InicioCampeonato;
@@ -75,7 +75,7 @@ public class Campeonato {
 	@Override
 	public String toString() {
 		return "Campeonato [Nome=" + Nome + ", Locais=" + Locais + ", Juizes=" + Juizes + ", Categorias=" + Categorias
-				+ ", DataInicioInscrição=" + DataInicioInscrição + ", DataFimInscrição=" + DataFimInscrição
+				+ ", DataInicioInscricao=" + DataInicioInscricao + ", DataFimInscricao=" + DataFimInscricao
 				+ ", InicioCampeonato=" + InicioCampeonato + ", FimCampeonato=" + FimCampeonato + ", valorTaxa="
 				+ valorTaxa + "]";
 	}

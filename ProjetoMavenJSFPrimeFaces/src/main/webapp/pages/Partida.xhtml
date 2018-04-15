@@ -17,22 +17,35 @@
 	   	<p:outputLabel value="#{msg['pages.Partida.hello']}"/>
 	   	
 	   	<h:form id="formEquip">
-      <p:panelGrid columns="2">
+      <p:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
       <p:outputLabel value="#{msg['pages.Partida.numero']}" />
        <p:inputText value="#{Champs.nome}"/>
-       <p:outputLabel value="#{msg['pages.Partida.equipCasa']}" />
-       <p:inputText value="#{Champs.dataIni}"/>
-       <p:outputLabel value="#{msg['pages.Partida.equipFora']}" />
-       <p:inputText value="#{Champs.dataFim}"/>
+       <p:outputLabel for="equipCasa" value="Equipe Mandante: " />
+        <p:selectOneMenu id="equipCasa" value="#{selectOneMenuView.equipCasa}">
+            <f:selectItem itemLabel="Selecione um" itemValue="" />
+            <f:selectItems value="#{selectOneMenuView.Local}" />
+        </p:selectOneMenu>
+       <p:outputLabel for="equipFora" value="Equipe Visitante: " />
+        <p:selectOneMenu id="equipFora" value="#{selectOneMenuView.equipFora}">
+            <f:selectItem itemLabel="Selecione um" itemValue="" />
+            <f:selectItems value="#{selectOneMenuView.Local}" />
+        </p:selectOneMenu>
        <p:outputLabel value="#{msg['pages.Partida.data']}" />
        <p:inputText value="#{Champs.iniInscr}"/>
-       <p:outputLabel value="#{msg['pages.Partida.local']}" />
-       <p:inputText value="#{Champs.fimInscr}"/>
-       <p:outputLabel value="#{msg['pages.Partida.juizes']}" />
-       <p:inputText value="#{Champs.locais}"/>
+       <p:outputLabel for="Local" value="Local: " />
+        <p:selectOneMenu id="Local" value="#{selectOneMenuView.Local}">
+            <f:selectItem itemLabel="Selecione um" itemValue="" />
+            <f:selectItems value="#{selectOneMenuView.Local}" />
+        </p:selectOneMenu>
+       <p:outputLabel for="Juiz" value="Juiz: " />
+        <p:selectOneMenu id="Juiz" value="#{selectOneMenuView.Juiz}">
+            <f:selectItem itemLabel="Selecione um" itemValue="" />
+            <f:selectItems value="#{selectOneMenuView.Juiz}" />
+        </p:selectOneMenu>
        <p:outputLabel value="#{msg['pages.Partida.relato']}" />
        <p:inputText value="#{Champs.juiz}"/>
-       <p:button outcome="Partida.xhtml" value="#{msg['pages.Partida.resultado']}"></p:button>
+       
+       <p:button outcome="Resultado.xhtml" value="#{msg['pages.Partida.resultado']}"></p:button>
 	   <p:button outcome="Partida.xhtml" value="#{msg['pages.Partida.partida']}"></p:button>
         <p:commandButton value="#{msg['pages.Usuario.salvar']}" 
                      action="#{alunoManagedBean.salvar}"

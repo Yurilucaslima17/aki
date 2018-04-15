@@ -9,31 +9,31 @@ import javax.persistence.Id;
 public class Usuario {
 	@Id
 	private String CPF;
-	private String Email, Nome, TelefoneFixo, TelefoneMovel, Endereço, RG, CREF, foto;
+	private String Email, Nome, TelefoneFixo, TelefoneMovel, Endereco, RG, CREF, foto;
 	private List<Equipe> Equipes;
-	private List<Inscrito> Inscrições;
+	private List<Inscrito> Inscricoes;
 	private List<Campeonato> Campeonatos;
 	private Date DataNascimento;
 	private enum Sexo {F,M;};
 	private Sexo sexo;
-	private enum Tipo {ADM, Juiz, Organizador, Jogador, Técnico, Torcedor, Diretor;};
+	private enum Tipo {ADM, Juiz, Organizador, Jogador, TÃ©cnico, Torcedor, Diretor;};
 	private Tipo tipo;
 	public Usuario() {}
-	public Usuario(String email, String nome, String telefoneFixo, String telefoneMovel, String endereço, String rG,
-			String cPF, String cREF, String foto, List<Equipe> equipes, List<Inscrito> inscrições,
+	public Usuario(String email, String nome, String telefoneFixo, String telefoneMovel, String endereco, String RG,
+			String CPF, String CREF, String foto, List<Equipe> equipes, List<Inscrito> inscricoes,
 			List<Campeonato> campeonatos, Date dataNascimento, Sexo sexo, Tipo tipo) {
 		super();
 		Email = email;
 		Nome = nome;
 		TelefoneFixo = telefoneFixo;
 		TelefoneMovel = telefoneMovel;
-		Endereço = endereço;
-		RG = rG;
-		CPF = cPF;
-		CREF = cREF;
+		Endereco = endereco;
+		this.RG = RG;
+		this.CPF = CPF;
+		this.CREF = CREF;
 		this.foto = foto;
 		Equipes = equipes;
-		Inscrições = inscrições;
+		Inscricoes = inscricoes;
 		Campeonatos = campeonatos;
 		DataNascimento = dataNascimento;
 		this.sexo = sexo;
@@ -63,29 +63,29 @@ public class Usuario {
 	public void setTelefoneMovel(String telefoneMovel) {
 		TelefoneMovel = telefoneMovel;
 	}
-	public String getEndereço() {
-		return Endereço;
+	public String getEndereco() {
+		return Endereco;
 	}
-	public void setEndereço(String endereço) {
-		Endereço = endereço;
+	public void setEndereco(String endereco) {
+		Endereco = endereco;
 	}
 	public String getRG() {
 		return RG;
 	}
-	public void setRG(String rG) {
-		RG = rG;
+	public void setRG(String RG) {
+		this.RG = RG;
 	}
 	public String getCPF() {
 		return CPF;
 	}
-	public void setCPF(String cPF) {
-		CPF = cPF;
+	public void setCPF(String CPF) {
+		this.CPF = CPF;
 	}
 	public String getCREF() {
 		return CREF;
 	}
-	public void setCREF(String cREF) {
-		CREF = cREF;
+	public void setCREF(String CREF) {
+		this.CREF = CREF;
 	}
 	public String getFoto() {
 		return foto;
@@ -99,11 +99,11 @@ public class Usuario {
 	public void setEquipes(List<Equipe> equipes) {
 		Equipes = equipes;
 	}
-	public List<Inscrito> getInscrições() {
-		return Inscrições;
+	public List<Inscrito> getInscricoes() {
+		return Inscricoes;
 	}
-	public void setInscrições(List<Inscrito> inscrições) {
-		Inscrições = inscrições;
+	public void setInscricoes(List<Inscrito> inscricoes) {
+		Inscricoes = inscricoes;
 	}
 	public List<Campeonato> getCampeonatos() {
 		return Campeonatos;
@@ -132,8 +132,8 @@ public class Usuario {
 	@Override
 	public String toString() {
 		return "Usuario [Email=" + Email + ", Nome=" + Nome + ", TelefoneFixo=" + TelefoneFixo + ", TelefoneMovel="
-				+ TelefoneMovel + ", Endereço=" + Endereço + ", RG=" + RG + ", CPF=" + CPF + ", CREF=" + CREF
-				+ ", foto=" + foto + ", Equipes=" + Equipes + ", Inscrições=" + Inscrições + ", Campeonatos="
+				+ TelefoneMovel + ", Endereco=" + Endereco + ", RG=" + RG + ", CPF=" + CPF + ", CREF=" + CREF
+				+ ", foto=" + foto + ", Equipes=" + Equipes + ", Inscricoes=" + Inscricoes + ", Campeonatos="
 				+ Campeonatos + ", DataNascimento=" + DataNascimento + ", sexo=" + sexo + ", tipo=" + tipo + "]";
 	}
 	
