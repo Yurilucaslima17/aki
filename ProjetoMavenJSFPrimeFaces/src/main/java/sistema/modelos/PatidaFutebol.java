@@ -12,8 +12,8 @@ public class PatidaFutebol {
 	private List<Gol> GolsVisitantes;
 	private List<Gol> GolsPenaltisMandantes;
 	private List<Gol> GolsPenaltisVisitantes;
-	private List<Cartão> CartoesMandantes;
-	private List<Cartão> CartoesVisitantes;
+	private List<Cartao> CartoesMandantes;
+	private List<Cartao> CartoesVisitantes;
 	public List<Gol> getGolsMandantes() {
 		return GolsMandantes;
 	}
@@ -38,16 +38,16 @@ public class PatidaFutebol {
 	public void setGolsPenaltisVisitantes(List<Gol> golsPenaltisVisitantes) {
 		GolsPenaltisVisitantes = golsPenaltisVisitantes;
 	}
-	public List<Cartão> getCartoesMandantes() {
+	public List<Cartao> getCartoesMandantes() {
 		return CartoesMandantes;
 	}
-	public void setCartoesMandantes(List<Cartão> cartoesMandantes) {
+	public void setCartoesMandantes(List<Cartao> cartoesMandantes) {
 		CartoesMandantes = cartoesMandantes;
 	}
-	public List<Cartão> getCartoesVisitantes() {
+	public List<Cartao> getCartoesVisitantes() {
 		return CartoesVisitantes;
 	}
-	public void setCartoesVisitantes(List<Cartão> cartoesVisitantes) {
+	public void setCartoesVisitantes(List<Cartao> cartoesVisitantes) {
 		CartoesVisitantes = cartoesVisitantes;
 	}
 	@Override

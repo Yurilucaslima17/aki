@@ -3,7 +3,6 @@
 	<persistence-unit name="ProjetoMavenJSFPrimeFaces" transaction-type="RESOURCE_LOCAL">
 		<class>sistema.modelos.Local</class>
 		<class>sistema.modelos.Campeonato</class>
-		<class>sistema.modelos.Cartão</class>
 		<class>sistema.modelos.Categoria</class>
 		<class>sistema.modelos.Equipe</class>
 		<class>sistema.modelos.Fase</class>
@@ -16,6 +15,7 @@
 		<class>sistema.modelos.PatidaFutebol</class>
 		<class>sistema.modelos.Usuario</class>
 		<class>sistema.modelos.Rodada</class>
+		<class>sistema.modelos.Cartao</class>
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/DBTeste;create=true"/>
 			<property name="javax.persistence.jdbc.user" value="app"/>

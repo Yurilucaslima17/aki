@@ -16,7 +16,7 @@ public class Usuario {
 	private Date DataNascimento;
 	private enum Sexo {F,M;};
 	private Sexo sexo;
-	private enum Tipo {ADM, Juiz, Organizador, Jogador, Técnico, Torcedor, Diretor;};
+	private enum Tipo {ADM, Juiz, Organizador, Jogador, Tecnico, Torcedor, Diretor;};
 	private Tipo tipo;
 	public Usuario() {}
 	public Usuario(String email, String nome, String telefoneFixo, String telefoneMovel, String endereco, String RG,

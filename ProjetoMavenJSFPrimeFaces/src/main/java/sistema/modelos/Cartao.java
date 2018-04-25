@@ -4,10 +4,10 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Cartão {
+public class Cartao {
 	@Id
 	private Inscrito inscrito;
-	private enum Tipo {Jogador, Técnico;};
+	private enum Tipo {Jogador, Tecnico;};
 	private Tipo tipo;
 	private int tempo;
 	public Inscrito getInscrito() {
